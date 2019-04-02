@@ -1,82 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="bootstrap.min.css">
-<style>
-  body{
-    color:#fff;
-    background-color: #333;
-  }
-  /*.mar{
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      body {
+        color: #fff;
+        background-color: #333;
+      }
+      /*.mar{
     margin-left: 35%;
   }*/
+    </style>
 
-</style>
+    <title>Weight converter</title>
+  </head>
+  <body>
+    <div class="mar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <h1 class="display-3 text-center">Weight Converter</h1>
 
-  <title>Weight converter</title>
-</head>
-<body>
-  <div class="mar">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <h1 class ="display-3 text-center">Weight Converter</h1>
-         
-        <form>
-           <div
-             class="form-group">
-             <input 
-             id = "lbsinput"
-             type="number"
-             class="form-control form-control-lg" placeholder="Enter pounds...">
-            </div>
-         </form>
+            <form>
+              <div class="form-group">
+                <input
+                  id="lbsinput"
+                  type="number"
+                  class="form-control form-control-lg"
+                  placeholder="Enter pounds..."
+                />
+              </div>
+            </form>
 
-         
-         <div id="output">
-            <div class ="card bg-primary">
-               <div class = "card-block">
-                  <h5> Grams:</h5>
-                <div id="gramsOutput">
-                    
-                 </div>
-               </div>
-             </div>
-           
-             <div class ="card bg-success">
-                <div class = "card-block">
+            <div id="output">
+              <div class="card bg-primary">
+                <div class="card-block">
+                  <h5>Grams:</h5>
+                  <div id="gramsOutput"></div>
+                </div>
+              </div>
+
+              <div class="card bg-success">
+                <div class="card-block">
                   <h5>Kilograms:</h5>
                   <div id="kgOutput"></div>
                 </div>
               </div>
 
-              <div class ="card bg-danger">
-                  <div class = "card-block">
-                    <h5>Ounces:</h5>
-                    <div id="ozOutput"></div>
-                  </div>
-                </div> 
+              <div class="card bg-danger">
+                <div class="card-block">
+                  <h5>Ounces:</h5>
+                  <div id="ozOutput"></div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<script>
-document.getElementById('output').style.visibility='hidden';
-document.getElementById('lbsinput').addEventListener('input', function(e){
-  document.getElementById('output').style.visibility='visible';
-  let lbs=e.target.value;
-  document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
-  document.getElementById('kgOutput').innerHTML = lbs/2.2046;
-  document.getElementById('ozOutput').innerHTML = lbs*16;
- 
- 
- 
-} );
-</script>
-</body>
+    <script>
+      document.getElementById("output").style.visibility = "hidden";
+      document
+        .getElementById("lbsinput")
+        .addEventListener("input", function(e) {
+          document.getElementById("output").style.visibility = "visible";
+          let lbs = e.target.value;
+          document.getElementById("gramsOutput").innerHTML = lbs / 0.0022046;
+          document.getElementById("kgOutput").innerHTML = lbs / 2.2046;
+          document.getElementById("ozOutput").innerHTML = lbs * 16;
+        });
+    </script>
+  </body>
 </html>
